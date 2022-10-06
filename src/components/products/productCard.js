@@ -2,8 +2,6 @@
 import React from "react"
 export default function Card({foodItem}){
 
-    console.log(foodItem.food)
-
 
     return(
     <div class="col-sm-6 col-md-4 col-lg-3 h-100 mb-5">

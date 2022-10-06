@@ -1,28 +1,8 @@
 import Card from "./productCard";
 import React, {useState, useEffect} from "react";
 
-export default function Products(){
+export default function Products({products}){
 
-    const [products, setProducts] = useState([]); 
-
-    
-
-    //some network inits
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '076c578e13msh53cc4b25ccc9d83p1a03a3jsn2a9b2ba7b53d',
-            'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
-        }
-    };
-    // make requests
-    useEffect(()=>{
-        
-        fetch('https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=apple', options)
-            .then(response => response.json())
-            .then(response => setProducts(response.hints))
-            .catch(err => console.error(err));
-    },[])
 
     return(
         <section className="py-4 overflow-hidden">
