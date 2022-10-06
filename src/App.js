@@ -1,9 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/nav/nav';
+import './theme.min.css'
+import Home from './components/home';
 
 function App() {
   return (
-    <h1>What2Eat</h1>
+    <>
+    <NavBar/>
+    <Home />
+    </>
+    
   );
 }
 
