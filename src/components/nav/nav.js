@@ -3,7 +3,7 @@ export default function NavBar(){
  
    return(
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-navbar-on-scroll="data-navbar-on-scroll">
-    <div className="container"><a className="navbar-brand d-inline-flex" href="index.html"><img className="d-inline-block" src="assets/img/gallery/logo.svg" alt="logo" /><span className="text-1000 fs-3 fw-bold ms-2 text-gradient">What2Eat</span></a>
+    <div className="container"><a className="navbar-brand d-inline-flex" href="index.html"><span className="text-1000 fs-3 fw-bold ms-2 text-gradient">What2Eat</span></a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"> </span></button>
       <div className="collapse navbar-collapse border-top border-lg-0 my-2 mt-lg-0" id="navbarSupportedContent">
         <div className="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">

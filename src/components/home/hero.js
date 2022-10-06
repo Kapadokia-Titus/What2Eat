@@ -15,8 +15,7 @@ export default function Hero(){
                 <div className="card-body">
                   <nav>
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                      <button className="nav-link active mb-3" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i className="fas fa-motorcycle me-2"></i>Delivery</button>
-                      <button className="nav-link mb-3" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i className="fas fa-shopping-bag me-2"></i>Pickup</button>
+                      <button className="nav-link active mb-3" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i className="fas fa-motorcycle me-2"></i>What's Your Fav Meal?</button>
                     </div>
                   </nav>
                   <div className="tab-content mt-3" id="nav-tabContent">
@@ -25,7 +24,7 @@ export default function Hero(){
                         <div className="col">
                           <div className="input-group-icon"><i className="fas fa-map-marker-alt text-danger input-box-icon"></i>
                             <label className="visually-hidden" for="inputDelivery">Address</label>
-                            <input className="form-control input-box form-foodwagon-control" id="inputDelivery" type="text" placeholder="Enter Your Address" />
+                            <input className="form-control input-box form-foodwagon-control" id="inputDelivery" type="text" placeholder="e.g Chapo Beans" />
                           </div>
                         </div>
                         <div className="d-grid gap-3 col-sm-auto">
@@ -33,19 +32,7 @@ export default function Hero(){
                         </div>
                       </form>
                     </div>
-                    <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                      <form className="row gx-4 gy-2 align-items-center">
-                        <div className="col">
-                          <div className="input-group-icon"><i className="fas fa-map-marker-alt text-danger input-box-icon"></i>
-                            <label className="visually-hidden" for="inputPickup">Address</label>
-                            <input className="form-control input-box form-foodwagon-control" id="inputPickup" type="text" placeholder="Enter Your Address" />
-                          </div>
-                        </div>
-                        <div className="d-grid gap-3 col-sm-auto">
-                          <button className="btn btn-danger" type="submit">Find Food</button>
-                        </div>
-                      </form>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
