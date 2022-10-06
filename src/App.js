@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import React, {useEffect, useState} from 'react';
+import './theme.min.css'
 import './App.css';
 import NavBar from './components/nav/nav';
 import Home from './components/home';
