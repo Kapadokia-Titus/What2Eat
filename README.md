@@ -46,5 +46,5 @@ Visit the live link here https://what2eat-ke.netlify.app/
 
 ### Snippets
 
-<img src="./src/hero.png" height="400px">
-<img src="./src/prod.png" height="400px">
+<img src="hero.png" height="400px">
+<img src="prod.png" height="400px">
