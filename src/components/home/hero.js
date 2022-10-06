@@ -1,6 +1,5 @@
 import React from "react";
 import header from "../../img/header.png"
-
 export default function Hero(){
 
     return(

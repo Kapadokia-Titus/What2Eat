@@ -10,6 +10,7 @@ import Categories from './components/products/categories';
 function App() {
 
   const [products, setProducts] = useState([]); 
+  // handle search
 
     
 
