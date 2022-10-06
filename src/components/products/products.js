@@ -3,7 +3,6 @@ import React, {useState, useEffect} from "react";
 
 export default function Products({products}){
 
-
     return(
         <section className="py-4 overflow-hidden">
 
@@ -18,8 +17,8 @@ export default function Products({products}){
                   <div className="carousel-item active" data-bs-interval="10000">
                     <div className="row gx-3 h-100 align-items-center">
                       
-                      {products.map(food=>(
-                        <Card  foodItem={food}/>
+                      {products?.map(food=>(
+                        <Card key={food.index} foodItem={food}/>
                         
                       ))}
                         

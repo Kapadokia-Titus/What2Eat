@@ -11,8 +11,9 @@ function App() {
 
   const [products, setProducts] = useState([]); 
   // handle search
-  const [filteredItem, setFilteredProducts] = useState([]);
+  const [filteredItem, setFilteredProducts] = useState("fast food");
 
+  
     //some network inits
     const options = {
         method: 'GET',
@@ -24,27 +25,30 @@ function App() {
     // make requests
     useEffect(()=>{
         
-        fetch('https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=apple', options)
+        fetch(`https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${filteredItem}`, options)
             .then(response => response.json())
             .then(response => setProducts(response.hints))
             .catch(err => console.error(err));
-    },[])
+    },[filteredItem])
 
 
     // handle onchange
-    function handleOnchange(event){
-      // some logic
+    function handleOnchange(search){
+
+      setFilteredProducts(search.key)
+
     }
 
     function handleCardClick(event){
       // some logic
-    }
 
+    }
+ console.log(products)
   return (
     <>
     <NavBar/>
     <Home onSearch={handleOnchange} />
-    <Products products={products} onChange={handleOnchange} cardClick={handleCardClick}/>
+    <Products products={products} cardClick={handleCardClick}/>
     </>
     
   );

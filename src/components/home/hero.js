@@ -1,6 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import header from "../../img/header.png"
-export default function Hero(){
+
+export default function Hero({query}){
+
+  //holds the search keyword
+  const [search, setSearch] = useState([])
+
+  //listens to changes in search
+  function handleChange(event){
+    // initialize key
+    const key = event.target.id; 
+    // set search
+    setSearch({search, key:event.target.value})
+    query(search)
+  }
 
     return(
         <section className="py-5 overflow-hidden bg-primary" id="home">
@@ -22,8 +35,8 @@ export default function Hero(){
                       <form className="row gx-2 gy-2 align-items-center">
                         <div className="col">
                           <div className="input-group-icon"><i className="fas fa-map-marker-alt text-danger input-box-icon"></i>
-                            <label className="visually-hidden" for="inputDelivery">Address</label>
-                            <input className="form-control input-box form-foodwagon-control" id="inputDelivery" type="text" placeholder="e.g Chapo Beans" />
+                            <label className="visually-hidden" htmlFor="inputDelivery">Address</label>
+                            <input className="form-control input-box form-foodwagon-control" id="inputDelivery" onChange={handleChange} type="text" placeholder="e.g Chapo Beans" />
                           </div>
                         </div>
                         <div className="d-grid gap-3 col-sm-auto">

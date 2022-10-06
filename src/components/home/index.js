@@ -1,8 +1,8 @@
 import Hero from "./hero";
 
-export default function Home(){
+export default function Home({onSearch}){
 
     return(
-        <Hero />
+        <Hero  query={onSearch}/>
     )
 }
