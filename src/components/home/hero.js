@@ -10,7 +10,7 @@ export default function Hero(){
             <div className="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a className="img-landing-banner" href="#!"><img className="img-fluid" src={header} alt="hero-header" /></a></div>
             <div className="col-md-7 col-lg-6 py-8 text-md-start text-center">
               <h1 className="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">Are you starving?</h1>
-              <h1 className="text-800 mb-5 fs-4">Within a few clicks, find meals that<br className="d-none d-xxl-block" />are accessible near you</h1>
+              <h1 className="text-800 mb-5 fs-4">Within a few clicks, find meals that <br className="d-none d-xxl-block" />are accessible near you</h1>
               <div className="card w-xxl-75">
                 <div className="card-body">
                   <nav>
