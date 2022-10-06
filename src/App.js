@@ -11,8 +11,7 @@ function App() {
 
   const [products, setProducts] = useState([]); 
   // handle search
-
-    
+  const [filteredItem, setFilteredProducts] = useState([]);
 
     //some network inits
     const options = {
