@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import { Route, Routes } from "react-router-dom";
 import "./theme.min.css"
 import './App.css';
-import "./theme.min.css"
 import Home from './components/home';
 import Foods from "./components/foods";
 import NavBar from "./components/nav/nav";
@@ -24,6 +23,7 @@ function handleOnchange(search){
     <Routes> 
         <Route path="/" element={<Home keyword={filteredItem}/>} />
         <Route path="/foods" element={<Foods />}/>
+        <Route path="/food/:id" element={<Foods />}/>
     </Routes>
     </>
     

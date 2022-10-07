@@ -1,6 +1,7 @@
 
 import React from "react"
-export default function Card({foodItem}){
+import { Link } from "react-router-dom"
+export default function Card({foodItem, onOrderClick}){
 
 
     return(
@@ -11,7 +12,18 @@ export default function Card({foodItem}){
             <div><span className="text-warning me-2"><i className="fas fa-map-marker-alt"></i></span><span className="text-primary">{foodItem.food.brand}</span></div><span className="text-1000 fw-bold">${Math.random()}</span>
         </div>
         </div>
-        <div className="d-grid gap-2"><a className="btn btn-lg btn-danger" href="#!" role="button">Order now</a></div>
+        <div className="d-grid gap-2">
+            <Link to={
+                {
+                    pathname:`/food/${foodItem.food.foodId}`, 
+                    state:{foodItem}
+                }
+            }>
+            <a className="btn btn-lg btn-danger" role="button">Order now</a>
+            </Link>
+           
+            
+            </div>
     </div>
   )
 }

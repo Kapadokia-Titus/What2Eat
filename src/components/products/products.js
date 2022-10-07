@@ -1,7 +1,13 @@
 import Card from "./productCard";
-import React, {useState, useEffect} from "react";
-
+import React from "react";
 export default function Products({products}){
+
+   
+
+    function handleOrderClicked(id){
+        console.log(id.food.foodId)
+        
+    }
 
     return(
         <section className="py-4 overflow-hidden">
@@ -18,12 +24,10 @@ export default function Products({products}){
                     <div className="row gx-3 h-100 align-items-center">
                       
                       {products?.map(food=>(
-                        <Card key={food.index} foodItem={food}/>
+                        <Card key={food.index} onOrderClick={handleOrderClicked} foodItem={food}/>
                         
                       ))}
                         
-                       
-
                     </div>
                   </div>
                  
