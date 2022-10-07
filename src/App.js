@@ -22,7 +22,7 @@ function handleOnchange(search){
     <NavBar onSearch={handleOnchange}/>
     <Routes> 
         <Route path="/" element={<Home keyword={filteredItem}/>} />
-        <Route path="/foods" element={<Foods />}/>
+        <Route path="/foods/index.js" element={<Foods keyword={filteredItem} />}/>
         <Route path="/food/:id" element={<Foods />}/>
     </Routes>
     </>

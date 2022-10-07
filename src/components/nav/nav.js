@@ -27,7 +27,7 @@ export default function NavBar({onSearch}){
           <div className="input-group-icon pe-2"><i className="fas fa-search input-box-icon text-primary"></i>
             <input className="form-control border-0 input-box bg-100" type="search" placeholder="Search Food" onChange={handleChange} aria-label="Search" />
           </div>
-          <button className="btn btn-white shadow-warning text-warning" type="submit"> <i className="fas fa-user me-2"></i><Link to="/foods">Discover</Link></button>
+          <button className="btn btn-white shadow-warning text-warning" type="submit"> <i className="fas fa-user me-2"></i><Link to="/foods/index.js">Discover</Link></button>
         </form>
       </div>
     </div>

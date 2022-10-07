@@ -50,7 +50,7 @@ export default function Home({keyword}){
   return (
     <>
     <Hero query={handleOnchange}  onButtonClick={handleSearchButtonClick}/>
-    <Products products={products} cardClick={handleCardClick}/>
+    <Products products={products}/>
     </>
     
   );
