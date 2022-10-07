@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 
 export default function NavBar({onSearch}){
 
@@ -16,7 +17,7 @@ export default function NavBar({onSearch}){
  
    return(
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-navbar-on-scroll="data-navbar-on-scroll">
-    <div className="container"><a className="navbar-brand d-inline-flex" href="index.html"><span className="text-1000 fs-3 fw-bold ms-2 text-gradient">What2Eat</span></a>
+    <div className="container"><a className="navbar-brand d-inline-flex" href="index.html"><span className="text-1000 fs-3 fw-bold ms-2 text-gradient"><Link to="/">What2Eat</Link></span></a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"> </span></button>
       <div className="collapse navbar-collapse border-top border-lg-0 my-2 mt-lg-0" id="navbarSupportedContent">
         <div className="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
@@ -26,7 +27,7 @@ export default function NavBar({onSearch}){
           <div className="input-group-icon pe-2"><i className="fas fa-search input-box-icon text-primary"></i>
             <input className="form-control border-0 input-box bg-100" type="search" placeholder="Search Food" onChange={handleChange} aria-label="Search" />
           </div>
-          <button className="btn btn-white shadow-warning text-warning" type="submit"> <i className="fas fa-user me-2"></i>Login</button>
+          <button className="btn btn-white shadow-warning text-warning" type="submit"> <i className="fas fa-user me-2"></i><Link to="/foods">Discover</Link></button>
         </form>
       </div>
     </div>

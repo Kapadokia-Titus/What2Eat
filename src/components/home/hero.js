@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import header from "../../img/header.png"
 
-export default function Hero({query}){
+export default function Hero({query, onButtonClick}){
 
   //holds the search keyword
   const [search, setSearch] = useState([])
@@ -32,7 +32,7 @@ export default function Hero({query}){
                   </nav>
                   <div className="tab-content mt-3" id="nav-tabContent">
                     <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                      <form className="row gx-2 gy-2 align-items-center">
+                      <form className="row gx-2 gy-2 align-items-center" onSubmit={onButtonClick}>
                         <div className="col">
                           <div className="input-group-icon"><i className="fas fa-map-marker-alt text-danger input-box-icon"></i>
                             <label className="visually-hidden" htmlFor="inputDelivery">Address</label>
