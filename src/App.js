@@ -46,7 +46,7 @@ function App() {
  console.log(products)
   return (
     <>
-    <NavBar/>
+    <NavBar onSearch={handleOnchange}/>
     <Home onSearch={handleOnchange} />
     <Products products={products} cardClick={handleCardClick}/>
     </>

@@ -1,5 +1,18 @@
+import React, {useState} from "react";
 
-export default function NavBar(){
+export default function NavBar({onSearch}){
+
+  //holds the search keyword
+  const [search, setSearch] = useState([])
+
+  //listens to changes in search
+  function handleChange(event){
+    // initialize key
+    const key = event.target.id; 
+    // set search
+    setSearch({search, key:event.target.value})
+    onSearch(search)
+  }
  
    return(
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-navbar-on-scroll="data-navbar-on-scroll">
@@ -11,7 +24,7 @@ export default function NavBar(){
         </div>
         <form className="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
           <div className="input-group-icon pe-2"><i className="fas fa-search input-box-icon text-primary"></i>
-            <input className="form-control border-0 input-box bg-100" type="search" placeholder="Search Food" aria-label="Search" />
+            <input className="form-control border-0 input-box bg-100" type="search" placeholder="Search Food" onChange={handleChange} aria-label="Search" />
           </div>
           <button className="btn btn-white shadow-warning text-warning" type="submit"> <i className="fas fa-user me-2"></i>Login</button>
         </form>
